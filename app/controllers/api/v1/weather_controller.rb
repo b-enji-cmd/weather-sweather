@@ -1,6 +1,6 @@
-class WeatherController < ActionController::API
+class Api::V1::WeatherController < ApplicationController
     def index
-        binding.pry
-        WeatherFacade.get_forecast()
+        transient_forecast = WeatherFacade.get_forecast(params[:location])
+        render json: ForecastSerializer.new(transient_forecast), status: 200
     end
 end
