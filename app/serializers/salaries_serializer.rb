@@ -1,4 +1,4 @@
 class SalariesSerializer
   include FastJsonapi::ObjectSerializer
-  attributes 
+  attributes  :destination, :forecast, :salaries
 end

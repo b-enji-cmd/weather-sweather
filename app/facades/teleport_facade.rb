@@ -5,6 +5,7 @@ class TeleportFacade
 			destination: destination,
 			salaries: TeleportService.get_salaries(destination)
 		}
-		Salary.new(salary_data)
+
+		transient_salary = Salary.new(salary_data)
 	end
 end
