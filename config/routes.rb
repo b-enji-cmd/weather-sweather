@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       get "/login", to: "sessions#new"
       post "/sessions", to: "sessions#create"
       get '/forecast', to: 'weather#index'
+      get '/salaries', to: 'cities#show'
     end
   end
 end
