@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       post "/sessions", to: "sessions#create"
       get '/forecast', to: 'weather#index'
       get '/salaries', to: 'cities#show'
+      post '/road_trips', to: 'road_trip#create'
     end
   end
 end
