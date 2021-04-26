@@ -8,6 +8,7 @@ RSpec.describe 'City API', type: :request do
       it "returns the forecast for a city" do
       	expect(json[:data][:type]).to eq 'salaries'
       	expect(json[:data][:attributes].keys).to include("forecast")
+      	expect(json[:data][:attributes][:forecast].keys).to eq([:summary,:temperature])
       end
 	end
 end
