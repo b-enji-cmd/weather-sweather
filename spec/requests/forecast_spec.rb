@@ -25,6 +25,5 @@ RSpec.describe 'Forecast API', type: :request do
         it "handles sad paths" do
 
         end
-	
 	end
 end
