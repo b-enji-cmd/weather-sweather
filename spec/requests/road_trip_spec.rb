@@ -14,6 +14,7 @@ RSpec.describe 'Road Trip API', type: :request do
 
         it "returns serialized road trip" do
             VCR.use_cassette("road_trip_cassette", :record => :new_episodes) do
+                
                 post api_v1_users_path, headers: headers, params: user_body, as: :json
 
                 trip_body = {
