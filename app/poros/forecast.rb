@@ -3,9 +3,7 @@ class Forecast
     def initialize(args)
         @id = nil
         @current = set_current(args[:current])
-
         @hourly = set_hourly(args[:hourly])
-      
         @daily = set_daily(args[:daily])
 
     end
