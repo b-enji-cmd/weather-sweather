@@ -27,7 +27,7 @@ class Forecast
             {   :dt=> Time.at(forecast[:dt]),
                 :temp=> ((forecast[:temp] - 273.15) * 9/5 + 32).round(2),
                 :conditions=> forecast[:weather][0][:description],
-                :weather=> forecast[:weather][0][:icon]
+                :icon=> forecast[:weather][0][:icon]
             }
         end
     end
