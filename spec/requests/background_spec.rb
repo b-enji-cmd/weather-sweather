@@ -25,4 +25,14 @@ RSpec.describe 'Background Image API', type: :request do
         end
 
     end
+
+    describe 'GET /api/v1/backgrounds' do
+        before {get "/api/v1/backgrounds"}
+        it "defaults to pictures of skylines as an edge case" do
+            VCR.use_cassette("background_edge_case", :record => :new_episodes) do
+                expect(json[:data][:attributes][:location]).to be_nil
+            end
+        end
+
+    end
 end
