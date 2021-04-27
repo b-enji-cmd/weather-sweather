@@ -10,7 +10,7 @@ module ExceptionHandler
         json_response({ message: 'Bad Credentials' }, :unprocessable_entity)
       end
 
-      rescue_from Api::V1::RoadTripController::BadTripError do |exception|
+      rescue_from ::BadTripError do |exception|
         json_response(ExceptionSerializer.new(exception), :unprocessable_entity)
       end
     end
