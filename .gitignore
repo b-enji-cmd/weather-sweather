@@ -18,7 +18,7 @@
 !/storage/.keep
 
 # Ignore coverage files
- coverage/
+coverage
 
 .byebug_history
 
