@@ -3,7 +3,7 @@ class RoadTripSerializer
   attributes :start_city, :end_city, :weather_at_eta
   # For some reason, to which I never figured out or understood, 
   # this attribute was always an array of the rest of the attributes.
-  # Please
+  # Please excuse this mess
   attribute :start_city do |object|
     object.start_city.first
   end
