@@ -18,11 +18,4 @@ RSpec.describe 'Forecast API', type: :request do
             expect(json[:data][:attributes][:current].keys).not_to eq ([:dt, :sunrise, :sunset, :temp, :feels_like, :pressure ,  :humidity, :dew_point, :uvi, :clouds, :wind_speed, :wind_deg, :visibility, :weather, :conditions, :rain])
         end
 	end
-
-	describe 'GET /api/v1/forecast?location=denver,co' do
-		before {get "/api/v1/forecast?location=blargh" }
-        it "handles sad paths" do
-            
-        end
-	end
 end
