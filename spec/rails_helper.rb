@@ -71,13 +71,10 @@ end
 
 VCR.configure do |config|
   config.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
+  config.hook_into :webmock
   # config.allow_http_connections_when_no_cassette = true
-  config.filter_sensitive_data("SECURE") do
-    ENV['MAPQUEST_API']
-    ENV['MAPQUEST_API_SECRET']
-    ENV['WEATHER_API']
-    ENV['PEXELS_API']
-    # or $credentials['somesite']['password'] or whatever
-  end
-  config.default_cassette_options = { re_record_interval: 7.days }
+  config.filter_sensitive_data("SECURE") { ENV['MAPQUEST_API'] }
+  config.filter_sensitive_data("SECURE") { ENV['MAPQUEST_API_SECRET'] }
+  config.filter_sensitive_data("SECURE") { ENV['WEATHER_API'] }
+  config.filter_sensitive_data("SECURE") { ENV['PEXELS_API'] }
 end

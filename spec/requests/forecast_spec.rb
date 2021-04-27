@@ -3,9 +3,9 @@ require "rails_helper"
 RSpec.describe 'Forecast API', type: :request do
 
 	describe 'GET /api/v1/forecast?location=denver,co' do
-		before {get "/api/v1/forecast?location=denver,co"}
         it "returns only needed information" do
             VCR.use_cassette('forecast_cassette', :record => :new_episodes) do
+                get "/api/v1/forecast?location=denver,co"
                 expect(json[:data][:type]).to eq 'forecast'
                 expect(json[:data][:id]).to be_nil
                 expect(json[:data][:attributes].keys).to eq (%i[id current daily hourly])
@@ -15,6 +15,7 @@ RSpec.describe 'Forecast API', type: :request do
 
         it "has correct data types" do
             VCR.use_cassette("forecast_cassette", :record => :new_episodes) do
+                get "/api/v1/forecast?location=denver,co"
                 expect(json[:data][:attributes][:current][:dt].class).to eq String
                 expect(json[:data][:attributes][:current][:sunrise].class).to eq String
                 expect(json[:data][:attributes][:current][:sunset].class).to eq String
@@ -31,9 +32,9 @@ RSpec.describe 'Forecast API', type: :request do
 	end
 
 	describe 'GET /api/v1/forecast?location=denver,co' do
-		before {get "/api/v1/forecast?location=denver,co" }
         it "does not return what I do not need" do
             VCR.use_cassette("sad_path", :record => :new_episodes) do
+                get "/api/v1/forecast?location=denver,co"
                 expect(json[:data][:attributes][:current].keys).not_to eq ([:dt, :sunrise, :sunset, :temp, :feels_like, :pressure ,  :humidity, :dew_point, :uvi, :clouds, :wind_speed, :wind_deg, :visibility, :weather, :conditions, :rain])
             end
         end
