@@ -46,6 +46,10 @@ group :development, :test do
   gem 'figaro'
 end
 
+group :test do
+ gem 'vcr'
+end
+
 group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
 end
