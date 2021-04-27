@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       post "/sessions", to: "sessions#create"
       get '/forecast', to: 'weather#index'
       get '/backgrounds', to: 'image#show'
+      post '/road_trip', to: 'road_trip#create'
     end
   end
 end
