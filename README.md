@@ -150,7 +150,9 @@ GET /api/v1/forecast?location=denver,co
 ### Get Image: `GET /api/v1/backgrounds`
 * Returns background image for given city
 > Required Parameters: `:location`
+
 Sample Response
+
 ```
 GET /api/v1/backgrounds?location=denver,co
 
