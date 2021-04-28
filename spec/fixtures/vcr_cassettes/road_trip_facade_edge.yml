@@ -5198,4 +5198,86 @@ http_interactions:
         rain","icon":"10d"}],"clouds":100,"pop":0.48,"rain":1.28,"uvi":5},{"dt":1620212400,"sunrise":1620188687,"sunset":1620242971,"moonrise":1620183120,"moonset":1620217620,"moon_phase":0.8,"temp":{"day":284.79,"min":275.71,"max":285.17,"night":281.2,"eve":284.17,"morn":275.71},"feels_like":{"day":282.95,"night":272.63,"eve":282.5,"morn":272.63},"pressure":1020,"humidity":36,"dew_point":270.29,"wind_speed":4.04,"wind_deg":27,"wind_gust":8.76,"weather":[{"id":500,"main":"Rain","description":"light
         rain","icon":"10d"}],"clouds":17,"pop":0.5,"rain":0.22,"uvi":5}]}'
   recorded_at: Wed, 28 Apr 2021 00:37:06 GMT
+- request:
+    method: get
+    uri: https://api.openweathermap.org/data/2.5/onecall?appid=SECURE&exclude=minutely&lat=51.50015&lon=-0.12624
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Wed, 28 Apr 2021 01:00:00 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '107'
+      Connection:
+      - keep-alive
+      X-Cache-Key:
+      - "/data/2.5/onecall?exclude=minutely&lat=51.5&lon=-0.13"
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: '{"cod":401, "message": "Invalid API key. Please see http://openweathermap.org/faq#error401
+        for more info."}'
+  recorded_at: Wed, 28 Apr 2021 00:59:56 GMT
+- request:
+    method: get
+    uri: https://api.openweathermap.org/data/2.5/onecall?appid=SECURE&exclude=minutely&lat=51.50015&lon=-0.12624
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Wed, 28 Apr 2021 01:00:00 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '107'
+      Connection:
+      - keep-alive
+      X-Cache-Key:
+      - "/data/2.5/onecall?exclude=minutely&lat=51.5&lon=-0.13"
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: '{"cod":401, "message": "Invalid API key. Please see http://openweathermap.org/faq#error401
+        for more info."}'
+  recorded_at: Wed, 28 Apr 2021 00:59:57 GMT
 recorded_with: VCR 6.0.0

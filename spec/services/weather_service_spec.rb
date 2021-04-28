@@ -9,7 +9,7 @@ RSpec.describe 'Weather Service API' do
         VCR.turn_off!
         json_body = File.read('spec/fixtures/weather_fixture.json')
 
-        stub_request(:get, "https://api.openweathermap.org/data/2.5/onecall?appid=d08b27659823f17a13e9da97c1809126&exclude=minutely&lat=39.738453&lon=-104.984853").
+        stub_request(:get, "https://api.openweathermap.org/data/2.5/onecall?appid=#{ENV['WEATHER_API']}&exclude=minutely&lat=39.738453&lon=-104.984853").
         with(
           headers: {
          'Accept'=>'*/*',

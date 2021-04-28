@@ -25,7 +25,7 @@ RSpec.describe 'Map Service API' do
     it "::get_length" do
       VCR.turn_off!
       json_body = File.read('spec/fixtures/map_length_fixture.json')
-      stub_request(:get, "http://www.mapquestapi.com/directions/v2/route?from=Denver,CO&key=DoDBRpc8AJefjqQPSFAX3pi8TFeC4r0u&to=Pueblo,CO").
+      stub_request(:get, "http://www.mapquestapi.com/directions/v2/route?from=Denver,CO&key=#{ENV['MAPQUEST_API']}&to=Pueblo,CO").
          with(
            headers: {
           'Accept'=>'*/*',
