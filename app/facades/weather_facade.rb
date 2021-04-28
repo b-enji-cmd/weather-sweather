@@ -1,7 +1,6 @@
 class WeatherFacade
     def self.get_forecast(location)
-			transient_location = MapService.get_lat(location)
-    		transient_weather = WeatherService.get_weather(transient_location)
+    		transient_weather = WeatherService.get_weather(location)
 
 			Forecast.new({ 
 				current: transient_weather[:current],
@@ -10,8 +9,7 @@ class WeatherFacade
 			 })
     end
 
-	def self.get_eta_weather(location,offset)
-		transient_location = MapService.get_lat(location)
-    	transient_weather = WeatherService.get_weather(transient_location)
+	def self.get_eta_weather(location)
+    	WeatherService.get_weather(location)
 	end
 end

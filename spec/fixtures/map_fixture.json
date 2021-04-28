@@ -1,0 +1,57 @@
+{
+  "info": {
+    "statuscode": 0,
+    "copyright": {
+      "text": "© 2021 MapQuest, Inc.",
+      "imageUrl": "http://api.mqcdn.com/res/mqlogo.gif",
+      "imageAltText": "© 2021 MapQuest, Inc."
+    },
+    "messages": []
+  },
+  "options": {
+    "maxResults": -1,
+    "thumbMaps": false,
+    "ignoreLatLngInput": false
+  },
+  "results": [
+    {
+      "providedLocation": {
+        "latLng": {
+          "lat": 39.738453,
+          "lng": -104.984853
+        }
+      },
+      "locations": [
+        {
+          "street": "N Sherman St",
+          "adminArea6": "",
+          "adminArea6Type": "Neighborhood",
+          "adminArea5": "Denver",
+          "adminArea5Type": "City",
+          "adminArea4": "Denver",
+          "adminArea4Type": "County",
+          "adminArea3": "CO",
+          "adminArea3Type": "State",
+          "adminArea1": "US",
+          "adminArea1Type": "Country",
+          "postalCode": "80203",
+          "geocodeQualityCode": "B1AAA",
+          "geocodeQuality": "STREET",
+          "dragPoint": false,
+          "sideOfStreet": "R",
+          "linkId": "0",
+          "unknownInput": "",
+          "type": "s",
+          "latLng": {
+            "lat": 39.738453,
+            "lng": -104.984853
+          },
+          "displayLatLng": {
+            "lat": 39.738453,
+            "lng": -104.984853
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -39,4 +39,14 @@ RSpec.describe 'Forecast API', type: :request do
             end
         end
 	end 
+
+    describe 'GET /api/v1/forecast?location=' do
+        it "does not return what I do not need" do
+            VCR.use_cassette("sad_path_params", :record => :new_episodes) do
+                get "/api/v1/forecast?location="
+               expect(json[:data]).to eq({})
+               expect(json[:error]).to eq "Invalid Location Parameter"
+            end
+        end
+	end 
 end
