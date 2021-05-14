@@ -10,6 +10,7 @@ class WeatherFacade
     end
 
 	def self.get_eta_weather(location)
+		# Update this method to handle dynamic dialy / hourly
     	WeatherService.get_weather(location)
 	end
 end

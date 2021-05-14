@@ -2,6 +2,7 @@ class Api::V1::RoadTripController < ApplicationController
 
     def create
     	valid_user = User.find_by!(api_key: road_trip_params[:api_key])
+        # Dry up this controller by moving logic into Facade 
         transient_trip = MapFacade.get_trip_length(road_trip_params)
         raise ::BadTripError.new(road_trip_params) if transient_trip.nil?
         transient_location = MapFacade.get_location_details(road_trip_params[:destination])
